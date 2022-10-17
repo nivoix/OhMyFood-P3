@@ -41,8 +41,6 @@
 }
 
 .button {
-  text-decoration: none;
-  color: inherit;
   padding: 20px 30px;
   background: linear-gradient(175deg, #FF79DA, #9356DC);
   color: #FFFFFF;
@@ -54,21 +52,15 @@
   display: flex;
   flex-direction: column;
   margin-left: 15px;
+  margin-bottom: 30px;
 }
-
-h2 {
-  margin-top: 30px;
-  width: auto;
-}
-
-.list {
+.rule__list {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
 }
-
-.bulle {
+.rule__list__bulle {
   width: 80%;
   max-width: 333px;
   height: 80px;
@@ -82,8 +74,7 @@ h2 {
   margin-bottom: 20px;
   box-shadow: 5px 5px 10px #cccccc;
 }
-
-.number {
+.rule__list__bulle__number {
   position: relative;
   left: -5%;
   background-color: #9356DC;
@@ -93,6 +84,21 @@ h2 {
   color: white;
   padding-left: 10px;
   padding-top: 6px;
+}
+
+@media screen and (min-width: 900px) {
+  .rule__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .rule__list__bulle {
+    width: 30%;
+  }
+}
+h2 {
+  margin-top: 30px;
+  width: auto;
 }
 
 .fa-store {
