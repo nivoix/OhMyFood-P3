@@ -3,6 +3,11 @@
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
 .header__logo {
   display: flex;
   align-items: center;
@@ -57,6 +62,7 @@
   margin-bottom: 30px;
 }
 .rule__list {
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -100,7 +106,7 @@
 }
 h2 {
   margin-top: 30px;
-  width: auto;
+  width: 100%;
 }
 
 .fa-store {
@@ -118,28 +124,46 @@ h2 {
   padding-left: 15px;
   width: auto;
 }
-.restaurant__restocard {
+.restaurant__bloc {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media screen and (min-width: 900px) {
+  .restaurant__bloc {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2%;
+  }
+}
+.restaurant__bloc__restocard {
   width: 96%;
   border-radius: 20px;
   box-shadow: 5px 5px 10px #cccccc;
+  margin-bottom: 20px;
 }
-.restaurant__restocard__liencard {
+@media screen and (min-width: 900px) {
+  .restaurant__bloc__restocard {
+    width: 48%;
+  }
+}
+.restaurant__bloc__restocard__liencard {
   width: auto;
   margin-bottom: 30px;
 }
-.restaurant__restocard__imgcontainer {
+.restaurant__bloc__restocard__imgcontainer {
   width: 100%;
   height: 200px;
   border-radius: 20px 20px 0 0;
 }
-.restaurant__restocard__imgcontainer__img { /* photo*/
+.restaurant__bloc__restocard__imgcontainer__img { /* photo*/
   border-radius: 20px 20px 0 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.restaurant__restocard__infocard {
+.restaurant__bloc__restocard__infocard {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
@@ -149,22 +173,22 @@ h2 {
   background-color: white;
   border-radius: 0 0 20px 20px;
 }
-.restaurant__restocard__infocard__heart {
+.restaurant__bloc__restocard__infocard__heart {
   width: 32px;
   position: absolute;
   right: 30px;
   cursor: pointer;
 }
-.restaurant__restocard__infocard__heart input[type=checkbox] {
+.restaurant__bloc__restocard__infocard__heart input[type=checkbox] {
   visibility: hidden;
 }
-.restaurant__restocard__infocard__heart input:checked ~ .empty {
+.restaurant__bloc__restocard__infocard__heart input:checked ~ .empty {
   opacity: 0;
 }
-.restaurant__restocard__infocard__heart input:checked ~ .full {
+.restaurant__bloc__restocard__infocard__heart input:checked ~ .full {
   opacity: 1;
 }
-.restaurant__restocard__infocard__nameandcity {
+.restaurant__bloc__restocard__infocard__nameandcity {
   display: flex;
   flex-direction: column;
 }

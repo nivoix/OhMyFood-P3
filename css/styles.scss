@@ -6,6 +6,10 @@ $color-tertiary:#99E2D0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+body{
+    max-width: 1400px;
+    margin-inline: auto;
+}
 .header{
     &__logo{
         display: flex;
@@ -59,6 +63,7 @@ $color-tertiary:#99E2D0;
     margin-left: 15px;
     margin-bottom: 30px;
     &__list{
+        width: 100%;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -102,7 +107,7 @@ $color-tertiary:#99E2D0;
 }
 h2{
     margin-top: 30px;
-    width: auto;
+    width: 100%;
 }
 .fa-store{
     color: $color-primary;
@@ -116,52 +121,66 @@ h2{
     flex-direction: column;
     padding-left: 15px;
     width: auto;
-    &__restocard{
-        width: 96%;
-        border-radius: 20px;
-        box-shadow: 5px 5px 10px #cccccc;
-        &__liencard{
-            width: auto;
-            margin-bottom: 30px;
+    &__bloc{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        @media screen and (min-width: 900px){
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 2%;
+    }
+        &__restocard{
+            width: 96%;
+            border-radius: 20px;
+            box-shadow: 5px 5px 10px #cccccc;
+            margin-bottom: 20px;
+            @media screen and (min-width: 900px){
+                width: 48%;
         }
-        &__imgcontainer{
-            width: 100%;
-            height: 200px;
-            border-radius: 20px 20px 0 0;
-            &__img{ /* photo*/
-                border-radius: 20px 20px 0 0;
+            &__liencard{
+                width: auto;
+                margin-bottom: 30px;
+            }
+            &__imgcontainer{
                 width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-        &__infocard{
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: flex-end;
-            position: relative;
-            gap: 33%;
-            width: 100%;
-            background-color: white;
-            border-radius: 0 0 20px 20px;
-            &__heart{
-                input[type="checkbox"] {
-                    visibility: hidden;
+                height: 200px;
+                border-radius: 20px 20px 0 0;
+                &__img{ /* photo*/
+                    border-radius: 20px 20px 0 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
-                input:checked ~ .empty{
-                    opacity: 0;
-                    }
-                input:checked ~ .full{
-                    opacity: 1;
-                }
-                width: 32px;
-                position: absolute;
-                right: 30px;
-                cursor: pointer;
             }
-            &__nameandcity{
+            &__infocard{
                 display: flex;
-                flex-direction: column;
+                flex-direction: row-reverse;
+                justify-content: flex-end;
+                position: relative;
+                gap: 33%;
+                width: 100%;
+                background-color: white;
+                border-radius: 0 0 20px 20px;
+                &__heart{
+                    input[type="checkbox"] {
+                        visibility: hidden;
+                    }
+                    input:checked ~ .empty{
+                        opacity: 0;
+                        }
+                    input:checked ~ .full{
+                        opacity: 1;
+                    }
+                    width: 32px;
+                    position: absolute;
+                    right: 30px;
+                    cursor: pointer;
+                }
+                &__nameandcity{
+                    display: flex;
+                    flex-direction: column;
+                }
             }
         }
     }
