@@ -152,6 +152,7 @@ h2 {
   margin-bottom: 30px;
 }
 .restaurant__bloc__restocard__imgcontainer {
+  position: relative;
   width: 100%;
   height: 200px;
   border-radius: 20px 20px 0 0;
@@ -162,6 +163,19 @@ h2 {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.restaurant__bloc__restocard__imgcontainer__new {
+  position: absolute;
+  background-color: #99E2D0;
+  border-radius: 4%;
+  color: #046b51;
+  font-weight: bold;
+  right: 6%;
+  top: 13%;
+  width: 18%;
+  height: 34px;
+  padding-top: 8px;
+  text-align: center;
 }
 .restaurant__bloc__restocard__infocard {
   display: flex;
@@ -202,7 +216,10 @@ h2 {
   right: 0px;
   top: 18px;
   opacity: 0;
-  color: #FF79DA;
+  background: linear-gradient(10deg, #ff79da 0%, #9356dc 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: xx-large;
 }
 
