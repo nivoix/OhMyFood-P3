@@ -8,6 +8,76 @@ body {
   margin-inline: auto;
 }
 
+.button {
+  cursor: pointer;
+  padding: 20px 30px;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
+  color: #FFFFFF;
+  border-radius: 50px;
+  border: transparent;
+  box-shadow: 5px 5px 10px #cccccc;
+}
+
+h5 {
+  font-family: shrikhand, sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  h5 {
+    text-align: center;
+  }
+}
+
+.foot {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 220px;
+  padding-left: 20px;
+  padding-top: 12px;
+  padding-bottom: 20px;
+}
+.foot__bloc {
+  display: flex;
+  flex-direction: column;
+  gap: 8%;
+  height: 65%;
+}
+@media screen and (min-width: 768px) {
+  .foot__bloc {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2%;
+  }
+}
+.foot__bloc__propose, .foot__bloc__become {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  gap: 5%;
+}
+.foot__bloc__propose i, .foot__bloc__become i {
+  width: 17px;
+}
+.foot__bloc p {
+  margin: 0;
+  width: 172px;
+}
+.foot__bloc__lien {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .header__logo {
   display: flex;
   align-items: center;
@@ -45,16 +115,6 @@ body {
   padding-inline: 30px;
 }
 
-.button {
-  cursor: pointer;
-  padding: 20px 30px;
-  background: linear-gradient(175deg, #FF79DA, #9356DC);
-  color: #FFFFFF;
-  border-radius: 50px;
-  border: transparent;
-  box-shadow: 5px 5px 10px #cccccc;
-}
-
 .rule {
   display: flex;
   flex-direction: column;
@@ -67,6 +127,13 @@ body {
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
+}
+@media screen and (min-width: 900px) {
+  .rule__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 .rule__list__bulle {
   width: 80%;
@@ -82,6 +149,11 @@ body {
   margin-bottom: 20px;
   box-shadow: 5px 5px 10px #cccccc;
 }
+@media screen and (min-width: 900px) {
+  .rule__list__bulle {
+    width: 30%;
+  }
+}
 .rule__list__bulle__number {
   position: relative;
   left: -5%;
@@ -94,16 +166,6 @@ body {
   padding-top: 6px;
 }
 
-@media screen and (min-width: 900px) {
-  .rule__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  .rule__list__bulle {
-    width: 30%;
-  }
-}
 h2 {
   margin-top: 30px;
   width: 100%;
@@ -233,42 +295,4 @@ h3, h4 {
 h4 {
   font-weight: 400;
   padding-bottom: 20px;
-}
-
-h5 {
-  font-family: shrikhand, sans-serif;
-  font-weight: 100;
-  font-size: 18px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
-.foot {
-  display: flex;
-  flex-direction: column;
-  background-color: black;
-  color: white;
-  width: 100%;
-  height: 220px;
-  padding-left: 20px;
-  padding-top: 12px;
-  padding-bottom: 20px;
-  gap: 8%;
-}
-.foot__propose, .foot__become {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 5%;
-}
-.foot__propose i, .foot__become i {
-  width: 17px;
-}
-.foot p {
-  margin: 0;
-}
-.foot__lien {
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */
