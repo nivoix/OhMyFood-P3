@@ -65,6 +65,12 @@
             background-color: #F6F6F6;
             margin-bottom: 20px;
             box-shadow: 5px 5px 10px #cccccc;
+            cursor: pointer;
+            transition: transform 400ms;
+                &:hover{
+                    background-color: #e6e3e3;
+                    transform:scale(1.1);
+                }
             @media screen and (min-width: 900px) {
                 width: 30%;
             }
@@ -143,6 +149,15 @@ h2{
                     height: 34px;
                     padding-top: 8px;
                     text-align: center;
+                    animation-duration: 0.70s;
+                    animation-name: clignoter;
+                    animation-iteration-count: infinite;
+                    transition: none;
+                        @keyframes clignoter {
+                            0%   { opacity:1; }
+                            50%   {opacity:0.65; }
+                            100% { opacity:1; }
+                        }
                 }
             }
             &__infocard{
