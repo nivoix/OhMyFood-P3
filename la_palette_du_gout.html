@@ -10,12 +10,50 @@
     <title>Ohmyfood</title>
   </head>
   <body>
-    <header class="header">
-        <div class="header__return">
-            <a href="index.html"><i class="fa-solid fa-arrow-left-long"></i></a>
+    <header class="headermenu">
+        <div class="headermenu__return">
+            <a href="index.html">
+              <div class="headermenu__return__arrow">
+                <i class="fa-solid fa-arrow-left-long"></i>
+              </div>
+            </a>
         </div>
-        <div class="header__logo"> 
+        <div class="headermenu__logo"> 
           <img src="images/logo/ohmyfood@2x.svg" class="header__logo__img" alt="logo du site">
         </div>
     </header>
+    <main class="menu">
+      <img class="menu__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo La palette du gout">
+      <div class="menu__bloc">
+        <div class="menu__bloc__title">
+            <h1>La palette du goût</h1>
+            <label class="menu__bloc__title__heart">
+              <input type="checkbox" />
+              <i class="fa-regular fa-heart empty"></i>
+              <i class="fa-solid fa-heart full"></i>
+            </label>
+          </div>
+        <section class="selection">
+          <div class="selection__entries">
+            <h2>ENTRÉES</h2>
+            <div class="selection__entries__container">
+              <div class="selection__entries__container__card">
+                <div class="selection__entries__container__card__choise">
+                  <h3>Fricassée d'escargots</h3>
+                  <p>Au piment d'espelette</p>
+                </div>
+                <div class="selection__entries__container__card__price">
+                  <strong>25€</strong>
+                </div>
+                <label class="selection__entries__container__card__check">
+                  <input type="checkbox" />
+                  <i class="fa-regular fa-circle-check"></i>
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="https://kit.fontawesome.com/6aa97794ec.js" crossorigin="anonymous"></script>   
   </body>

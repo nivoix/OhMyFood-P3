@@ -3,3 +3,117 @@
 @import "../sass/Composants/buttons";
 @import "../sass/Layout/footer";
 @import "../sass/Pages/mainpage";
+
+.headermenu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        padding: 30px 0 8px 0;
+        gap: 30%;
+        margin-inline: 6%;
+        margin-bottom: 5px;
+        position: relative;
+        &__return{
+            position: absolute;
+            left: 2px;
+            top: 46%;
+            width: 20px;
+            height: 25px;
+            font-weight: 900;
+            &__arrow{
+                color: black;
+                font-size: x-large;
+            }
+        }
+}
+.menu{
+    background-color: #F6F6F6;
+    
+    &__img{
+        width: 100%;
+        max-height: 250px;
+    }
+    &__bloc{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        &__title{
+            width: 100%;
+            height: 25%;
+            position: absolute;
+            top: -22%;
+            background-color: #F6F6F6;
+            border-radius: 30px 30px 0 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            &__heart{
+                position: relative;
+                cursor: pointer;
+                input[type=checkbox] {
+                    visibility: hidden;
+                }
+                input:checked ~ .empty {
+                    opacity: 0;
+                }
+                input:checked ~ .full {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+.empty {
+    font-size: x-large;
+  }
+.full {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    opacity: 0;
+    background: linear-gradient(10deg, #ff79da 0%, #9356dc 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: x-large;
+  }
+h1{
+    font-size: 20px;
+    font-family: shrikhand, sans-serif;
+}
+h2{
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 6%;
+}
+p{
+    margin: 0;
+}
+.selection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    &__entries{
+        display: flex;
+        flex-direction: column;
+        &__container{
+            display: flex;
+            flex-direction: column;
+            &__card{
+                display:flex ;
+                flex-direction: row;
+                &__choise{
+                    display: flex;
+                    flex-direction: column;
+                }
+                &__price{
+                    margin-top: 30%;
+                }
+                &__check{
+
+                }
+            }
+        }
+    }
+}
