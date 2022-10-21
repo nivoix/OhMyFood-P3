@@ -377,15 +377,18 @@ h4 {
 }
 .menu__bloc__title {
   width: 100%;
-  height: 25%;
+  height: 68px;
   position: absolute;
-  top: -22%;
+  top: -69px;
   background-color: #F6F6F6;
   border-radius: 30px 30px 0 0;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-top: 32px;
+  padding-left: 16px;
+  padding-right: 45px;
 }
 .menu__bloc__title__heart {
   position: relative;
@@ -425,7 +428,7 @@ h1 {
 h2 {
   font-size: 16px;
   font-weight: 300;
-  padding-left: 6%;
+  padding-left: 5%;
 }
 
 p {
@@ -442,17 +445,56 @@ p {
   flex-direction: column;
 }
 .selection__entries__container {
+  position: relative;
+  width: 95%;
   display: flex;
   flex-direction: column;
+  margin-inline: auto;
 }
 .selection__entries__container__card {
+  cursor: pointer;
   display: flex;
+  height: 55px;
+  padding-left: 2px;
+  margin-bottom: 15px;
   flex-direction: row;
+  justify-content: flex-start;
+  background-color: white;
+  border-radius: 14px;
+  box-shadow: 5px 5px 10px #cccccc;
+}
+.selection__entries__container__card input[type=checkbox] {
+  position: absolute;
 }
 .selection__entries__container__card__choise {
+  height: 100%;
+  padding-left: 6px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+.selection__entries__container__card__choise h3 {
+  padding: 0;
+}
+.selection__entries__container__card__choise p {
+  font-size: 12px;
+  margin: 6px 0 6px 0;
 }
 .selection__entries__container__card__price {
-  margin-top: 30%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 10px;
+}
+.selection__entries__container__card__check {
+  display: flex;
+  margin-right: -40px;
+  width: 40px;
+  align-items: center;
+  background-color: #99E2D0;
+  border-radius: 0 14px 14px 0;
+}
+.selection__entries__container__card__check i {
+  color: #fff;
 }/*# sourceMappingURL=styles.css.map */
