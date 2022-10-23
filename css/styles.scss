@@ -52,26 +52,26 @@
             padding-top: 32px;
             padding-left: 16px;
             padding-right: 45px;
-            &__heart{
+            &__heartmenu{
                 position: relative;
                 cursor: pointer;
                 input[type=checkbox] {
                     visibility: hidden;
                 }
-                input:checked ~ .empty {
+                input:checked ~ .emptymenu {
                     opacity: 0;
                 }
-                input:checked ~ .full {
+                input:checked ~ .fullmenu {
                     opacity: 1;
                 }
             }
         }
     }
 }
-.empty {
+.emptymenu {
     font-size: x-large;
   }
-.full {
+.fullmenu {
     position: absolute;
     right: 0px;
     top: 0px;
@@ -81,16 +81,16 @@
     -webkit-text-fill-color: transparent;
     font-size: x-large;
   }
-h1{
+.h1menu{
     font-size: 20px;
     font-family: shrikhand, sans-serif;
 }
-h2{
+.h2menu{
     font-size: 16px;
     font-weight: 300;
     padding-left: 5%;
 }
-p{
+.pmenu{
     margin: 0;
 }
 .selection{
@@ -101,59 +101,78 @@ p{
         display: flex;
         flex-direction: column;
         &__container{
-            position: relative;
             width: 95%;
             display: flex;
             flex-direction: column;
-            margin-inline: auto;
+            margin-left: 3%;
             &__card{
-                input[type=checkbox] {
-                    position: absolute;   
-                }
-                cursor: pointer;
-                display:flex ;
-                height: 55px;
-                padding-left: 2px;
+                width: 100%;
+                height: 60px;
                 margin-bottom: 15px;
+                display: flex;
                 flex-direction: row;
-                justify-content: flex-start;
-                background-color: white;
+                justify-content: space-between;
+                background-color:#fff;
                 border-radius: 14px;
                 box-shadow: 5px 5px 10px #cccccc;
-                &__choise{
-                    height: 100%;
-                    padding-left: 6px;
+                input[type=checkbox] {
+                    visibility: hidden;
+                    position: absolute;
+                }
+                input:checked + label ~ &__check {
+                    transform: ;
+                    transition: transform 0.8s ease-in;
+                    transition: transform 1.9s ease-out;
+                    opacity: 1;
+                    flex: 1;
+                    visibility: visible;
+                }
+                input:checked + label ~ &__icone {
+                    transform: rotate(360deg);
+                    transition: transform 0.6s ease-in-out;
+                }
+                &__group-choise-price{
+                    width: 80%;
+                    flex: 10;
+                    cursor: pointer;
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
                     align-items: flex-start;
-                    overflow: hidden;
-                    h3{
-                        padding: 0;
+                    justify-content: space-evenly;
+                    &__choise{
+                        width: 100%;
+                        padding-left: 10px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        &__h3menu{
+                            padding: 0;
+                        }
                     }
-                    p{
-                        font-size: 12px;
-                        margin: 6px 0 6px 0;
+                    &__price{
+                        width: 100%;
+                        padding-inline: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
                     }
-                }
-                &__price{
-                    display: flex;
-                    align-items: flex-end;
-                    padding-bottom: 10px;
                 }
                 &__check{
+                    height: 60px;
                     display: flex;
-                    margin-right: -40px;
-                    width: 40px;
                     align-items: center;
+                    justify-content: center;
+                    visibility: hidden;
+                    flex: 0;
                     background-color: $color-tertiary;
                     border-radius: 0 14px 14px 0;
-                    input:checked ~ .check{
+                    opacity: 0;
+                    transition: all 0.6s ease-in-out;
+                    &__icone{
+                        transform: rotate(0deg);
+                        font-size: 27px;
+                        color: #fff;
                     }
-                
-                i{
-                    color: #fff;
-                }
                 }
             }
         }

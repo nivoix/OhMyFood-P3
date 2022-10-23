@@ -163,9 +163,9 @@ h2{
             &__infocard{
                 display: flex;
                 flex-direction: row-reverse;
-                justify-content: flex-end;
+                justify-content: space-between;
                 position: relative;
-                gap: 33%;
+                gap: 31%;
                 width: 100%;
                 background-color: white;
                 border-radius: 0 0 20px 20px;
@@ -174,13 +174,13 @@ h2{
                         visibility: hidden;
                     }
                     input:checked ~ .empty{
-                        opacity: 0;
+                        opacity: 1;
                         }
                     input:checked ~ .full{
                         opacity: 1;
                     }
                     width: 32px;
-                    position: absolute;
+                    position: relative;
                     right: 30px;
                     cursor: pointer;
                 }

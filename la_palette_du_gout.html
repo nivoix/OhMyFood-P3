@@ -26,30 +26,38 @@
       <img class="menu__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo La palette du gout">
       <div class="menu__bloc">
         <div class="menu__bloc__title">
-            <h1>La palette du goût</h1>
-            <label class="menu__bloc__title__heart">
+            <h1 class="h1menu">La palette du goût</h1>
+            <label class="menu__bloc__title__heartmenu">
               <input type="checkbox" />
-              <i class="fa-regular fa-heart empty"></i>
-              <i class="fa-solid fa-heart full"></i>
+              <i class="fa-regular fa-heart emptymenu"></i>
+              <i class="fa-solid fa-heart fullmenu"></i>
             </label>
           </div>
         <section class="selection">
           <div class="selection__entries">
-            <h2>ENTRÉES</h2>
+            <h2 class="h2menu">ENTRÉES</h2>
             <div class="selection__entries__container">
-              <label class="selection__entries__container__card">
-                <input type="checkbox" />
-                  <div class="selection__entries__container__card__choise">
-                    <h3>Fricassée d'escargots</h3>
-                    <p>Au piment d'espelette</p>
+              <article class="selection__entries__container__card">
+                <input type="checkbox" id="fricassee">
+                <label for="fricassee" class="selection__entries__container__card__group-choise-price">
+                  <div class="selection__entries__container__card__group-choise-price__choise">
+                    <h3 class="selection__entries__container__card__group-choise-price__choise__h3menu">Fricassée d'escargots</h3>
                   </div>
-                  <div class="selection__entries__container__card__price">
+                  <div class="selection__entries__container__card__group-choise-price__price">
+                    <p class="pmenu">Au piment d'espelette</p>  
                     <strong>25€</strong>
                   </div>
-                  <div class="selection__entries__container__card__check">
-                    <i class="fa-regular fa-circle-check"></i>
-                  </div>
-              </label>
+                </label>
+                <div class="selection__entries__container__card__check">
+                    <i class="fa-regular fa-circle-check selection__entries__container__card__check__icone"></i>
+                </div>
+              </article>
+
+
+
+
+
+
               <div class="selection__entries__container__card">
                 <div class="selection__entries__container__card__choise">
                   <h3>Foie gras de canard mi-cuit</h3>

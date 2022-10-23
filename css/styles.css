@@ -285,16 +285,16 @@ h2 {
 .restaurant__bloc__restocard__infocard {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: flex-end;
+  justify-content: space-between;
   position: relative;
-  gap: 33%;
+  gap: 31%;
   width: 100%;
   background-color: white;
   border-radius: 0 0 20px 20px;
 }
 .restaurant__bloc__restocard__infocard__heart {
   width: 32px;
-  position: absolute;
+  position: relative;
   right: 30px;
   cursor: pointer;
 }
@@ -302,7 +302,7 @@ h2 {
   visibility: hidden;
 }
 .restaurant__bloc__restocard__infocard__heart input:checked ~ .empty {
-  opacity: 0;
+  opacity: 1;
 }
 .restaurant__bloc__restocard__infocard__heart input:checked ~ .full {
   opacity: 1;
@@ -390,25 +390,25 @@ h4 {
   padding-left: 16px;
   padding-right: 45px;
 }
-.menu__bloc__title__heart {
+.menu__bloc__title__heartmenu {
   position: relative;
   cursor: pointer;
 }
-.menu__bloc__title__heart input[type=checkbox] {
+.menu__bloc__title__heartmenu input[type=checkbox] {
   visibility: hidden;
 }
-.menu__bloc__title__heart input:checked ~ .empty {
+.menu__bloc__title__heartmenu input:checked ~ .emptymenu {
   opacity: 0;
 }
-.menu__bloc__title__heart input:checked ~ .full {
+.menu__bloc__title__heartmenu input:checked ~ .fullmenu {
   opacity: 1;
 }
 
-.empty {
+.emptymenu {
   font-size: x-large;
 }
 
-.full {
+.fullmenu {
   position: absolute;
   right: 0px;
   top: 0px;
@@ -420,18 +420,18 @@ h4 {
   font-size: x-large;
 }
 
-h1 {
+.h1menu {
   font-size: 20px;
   font-family: shrikhand, sans-serif;
 }
 
-h2 {
+.h2menu {
   font-size: 16px;
   font-weight: 300;
   padding-left: 5%;
 }
 
-p {
+.pmenu {
   margin: 0;
 }
 
@@ -445,56 +445,77 @@ p {
   flex-direction: column;
 }
 .selection__entries__container {
-  position: relative;
   width: 95%;
   display: flex;
   flex-direction: column;
-  margin-inline: auto;
+  margin-left: 3%;
 }
 .selection__entries__container__card {
-  cursor: pointer;
-  display: flex;
-  height: 55px;
-  padding-left: 2px;
+  width: 100%;
+  height: 60px;
   margin-bottom: 15px;
+  display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  background-color: white;
+  justify-content: space-between;
+  background-color: #fff;
   border-radius: 14px;
   box-shadow: 5px 5px 10px #cccccc;
 }
 .selection__entries__container__card input[type=checkbox] {
+  visibility: hidden;
   position: absolute;
 }
-.selection__entries__container__card__choise {
-  height: 100%;
-  padding-left: 6px;
+input:checked + label ~ .selection__entries__container__card__check {
+  transition: transform 0.8s ease-in;
+  transition: transform 1.9s ease-out;
+  opacity: 1;
+  flex: 1;
+  visibility: visible;
+}
+input:checked + label ~ .selection__entries__container__card__icone {
+  transform: rotate(360deg);
+  transition: transform 0.6s ease-in-out;
+}
+.selection__entries__container__card__group-choise-price {
+  width: 80%;
+  flex: 10;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
-  overflow: hidden;
+  justify-content: space-evenly;
 }
-.selection__entries__container__card__choise h3 {
+.selection__entries__container__card__group-choise-price__choise {
+  width: 100%;
+  padding-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.selection__entries__container__card__group-choise-price__choise__h3menu {
   padding: 0;
 }
-.selection__entries__container__card__choise p {
-  font-size: 12px;
-  margin: 6px 0 6px 0;
-}
-.selection__entries__container__card__price {
+.selection__entries__container__card__group-choise-price__price {
+  width: 100%;
+  padding-inline: 10px;
   display: flex;
-  align-items: flex-end;
-  padding-bottom: 10px;
+  align-items: center;
+  justify-content: space-between;
 }
 .selection__entries__container__card__check {
+  height: 60px;
   display: flex;
-  margin-right: -40px;
-  width: 40px;
   align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  flex: 0;
   background-color: #99E2D0;
   border-radius: 0 14px 14px 0;
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
 }
-.selection__entries__container__card__check i {
+.selection__entries__container__card__check__icone {
+  transform: rotate(0deg);
+  font-size: 27px;
   color: #fff;
 }/*# sourceMappingURL=styles.css.map */
