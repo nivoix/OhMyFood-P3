@@ -55,35 +55,30 @@
             &__heartmenu{
                 position: relative;
                 cursor: pointer;
-                input[type=checkbox] {
-                    visibility: hidden;
-                }
-                input:checked ~ .emptymenu {
+                &:hover .empty{
                     opacity: 0;
-                }
-                input:checked ~ .fullmenu {
+                    }
+                &:hover .full{
                     opacity: 1;
                 }
             }
         }
     }
 }
-.emptymenu {
-    font-size: x-large;
+.empty{
+    position: absolute;
+    font-size: xx-large;
     opacity: 1;
     transition: opacity 600ms cubic-bezier(0.5, 0.5, 0.5, 0.5) 0ms;
-  }
-.fullmenu {
-    position: absolute;
-    right: 0px;
-    top: 0px;
+}
+.full{
     opacity: 0;
     background: linear-gradient(10deg, #ff79da 0%, #9356dc 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: x-large;
+    font-size: xx-large;
     transition: opacity 600ms cubic-bezier(0.5, 0.5, 0.5, 0.5) 0ms;
-  }
+}
 .h1menu{
     font-size: 20px;
     font-family: shrikhand, sans-serif;
@@ -93,7 +88,8 @@
     font-weight: 300;
     border-bottom: 4px solid $color-tertiary;
     width: 40px;
-    margin-left: 14px;
+    margin-left: 23px;
+    padding-bottom: 6px;
 }
 
 .selection{
@@ -109,193 +105,91 @@
             flex-direction: column;
             margin-left: 3%;
             &__card{
-                width: 100%;
+                cursor: pointer;
+                max-width: 100%;
                 height: 60px;
-                padding-left: 2px;
+                overflow: hidden;
+                padding-left: 10px;
                 margin-bottom: 15px;
                 display: flex;
-                justify-content: space-between;
                 background-color:#fff;
                 border-radius: 14px;
                 box-shadow: 5px 5px 10px #cccccc;
-                &__group{
-                    cursor: pointer;
-                    width: 100%;
-                    display: flex;
-                    justify-content: flex-start;
-                    
-                    flex-wrap: nowrap;
-                    flex-direction: row;
-                    
-                    input[type=checkbox] {
-                        visibility: hidden;
-                        position: absolute;
-                    }
-                    input:checked ~ &__end {
+                &:hover  &__check {
                         transform: translateX(0px);
-                        opacity: 1;
-                    }  
-                    input:checked ~ &__icone1{
-                        animation: translate-check 400ms;
-                        z-index: 0;                             
-                    }
-                    input:checked ~ &__icone2{
-                        animation: translate-check 400ms;
-                        z-index: 0;                             
-                    }
-                    input:checked ~ &__icone3{
-                        animation: translate-check 400ms;
-                        z-index: 0;                             
-                    }
-                    input:checked ~ &__plat{
-                        text-overflow: ellipsis
-                    }
-                    &__plat{
-                        width: 70%;
-                        height: 100%;
-                        display: block;
-                        padding-left: 5px 15px;
-                        overflow: hidden;
-                        text-overflow: inherit;
-                        white-space: nowrap;
-                        &__h3menu{
+                        margin-right: 0;
+                        &__icone1{
+                            animation: rotate-icone 300ms .2s;
+                            z-index: 0;                             
+                        }
+                }
+                &__plat{
+                        max-width: 100%;
+                        height: 60px;
+                        padding-top: 6px;
+                        flex: 1;
+                        cursor: pointer;
+                    &__h3menu{
                             overflow: hidden;
                             text-overflow: ellipsis;
                             white-space: nowrap;
                             padding: 0;
                             padding-bottom: 5px;
-                        }
-                        &__pmenu{
+                    }
+                    &__pmenu{
                             margin: 0;
                             padding-right: 2px;
                             overflow: hidden;
                             text-overflow: ellipsis;
-                        }
-                    }
-                    &__end{
-                        width: 41%;
-                        height: 100%;
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: nowrap;
-                        justify-content: flex-start;
-                        transform-origin: 30% 50%;
-                        transform: translateX(55px);
-                        opacity: 0;
-                        transition: all 400ms;
-                        &__pricemenu{
-                            margin: 0;
-                            padding-bottom: 2px;
-                            display: flex;
-                            align-items: flex-end;
-                            padding-left: 2px;
-                            width: 100px;
-                        }
-                        &__check{
-                            width: 100%;
-                            height: 60px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            background-color: $color-tertiary;
-                            border-radius: 0 14px 14px 0; 
-                        }
-                    }
-                    &__icone1{
-                        position: absolute;
-                        z-index: -1;
-                        right: 6%;
-                        top: 14%;
-                        font-size: 27px;
-                        color: $color-tertiary;
-                        background-color: #fff;
-                        background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                        @keyframes translate-check{
-                            0%{
-                                transform: translateX(25px) rotateZ(0deg)
-                            }
-                            1%,100%{
-                                opacity: 1;
-                            }
-                            25%{
-                                transform: translateX(20px) rotateZ(90deg)
-                            }
-                            50%{
-                                transform: translateX(15px) rotateZ(180deg)
-                            }
-                            75%{
-                                transform: translateX(5px) rotateZ(225deg)
-                            }
-                            100%{
-                                transform: translateX(0px) rotateZ(270deg)
-                            }
-                        }
-                    }
-                    &__icone2{
-                        position: absolute;
-                        z-index: -1;
-                        right: 25px;
-                        top: 153px;
-                        font-size: 27px;
-                        color: $color-tertiary;
-                        background-color: #fff;
-                        background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                        @keyframes translate-check{
-                            0%{
-                                transform: translateX(25px) rotateZ(0deg)
-                            }
-                            1%,100%{
-                                opacity: 1;
-                            }
-                            25%{
-                                transform: translateX(20px) rotateZ(90deg)
-                            }
-                            50%{
-                                transform: translateX(15px) rotateZ(180deg)
-                            }
-                            75%{
-                                transform: translateX(5px) rotateZ(225deg)
-                            }
-                            100%{
-                                transform: translateX(0px) rotateZ(270deg)
-                            }
-                        }
-                    }
-                    &__icone3{
-                        position: absolute;
-                        z-index: -1;
-                        right: 25px;
-                        top: 230px;
-                        font-size: 27px;
-                        color: $color-tertiary;
-                        background-color: #fff;
-                        background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                        @keyframes translate-check{
-                            0%{
-                                transform: translateX(25px) rotateZ(0deg)
-                            }
-                            1%,100%{
-                                opacity: 1;
-                            }
-                            25%{
-                                transform: translateX(20px) rotateZ(90deg)
-                            }
-                            50%{
-                                transform: translateX(15px) rotateZ(180deg)
-                            }
-                            75%{
-                                transform: translateX(5px) rotateZ(225deg)
-                            }
-                            100%{
-                                transform: translateX(0px) rotateZ(270deg)
-                            }
-                        }
+                            white-space: nowrap;
                     }
                 }
-                
+                &__price{
+                    min-width: 40px;
+                    height:60px;
+                    display: flex;
+                    align-items: flex-end;
+                    padding-bottom: 10px;
+                    cursor: pointer;
+                }
+                &__check{
+                    min-width: 60px;
+                    height: 60px;
+                    margin-right: -60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $color-tertiary;
+                    border-radius: 0 14px 14px 0;
+                    transform: translateX(0px);
+                    transition: all cubic-bezier(0.4, 0, 1, 1) 500ms;
+                    &__icone1{
+                        z-index: -1;
+                        font-size: 27px;
+                        color: $color-tertiary;
+                        background-color: #fff;
+                        background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        @keyframes rotate-icone{
+                            0%{
+                                transform: rotateZ(0deg);
+                            }
+                            25%{
+                                transform: rotateZ(90deg);
+                            }
+                            50%{
+                                transform: rotateZ(180deg);
+                            }
+                            75%{
+                                transform: rotateZ(225deg);
+                            }
+                            100%{
+                                transform: rotateZ(270deg);
+                            }
+                        }
+                    }
+                    
+                }
             }
         }
     }
