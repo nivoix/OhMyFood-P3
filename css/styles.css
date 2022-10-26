@@ -302,7 +302,7 @@ h2 {
   visibility: hidden;
 }
 .restaurant__bloc__restocard__infocard__heart input:checked ~ .empty {
-  opacity: 1;
+  opacity: 0;
 }
 .restaurant__bloc__restocard__infocard__heart input:checked ~ .full {
   opacity: 1;
@@ -314,12 +314,16 @@ h2 {
 
 .empty {
   font-size: xx-large;
+  opacity: 1;
+  transition: opacity 600ms cubic-bezier(0.5, 0.5, 0.5, 0.5) 0ms;
 }
 
 .full {
   position: absolute;
   right: 0px;
   top: 18px;
+  left: 0px;
+  bottom: 0px;
   opacity: 0;
   background: linear-gradient(10deg, #ff79da 0%, #9356dc 100%);
   -webkit-background-clip: text;
@@ -407,6 +411,8 @@ h4 {
 
 .emptymenu {
   font-size: x-large;
+  opacity: 1;
+  transition: opacity 600ms cubic-bezier(0.5, 0.5, 0.5, 0.5) 0ms;
 }
 
 .fullmenu {
@@ -430,7 +436,9 @@ h4 {
 .h2menu {
   font-size: 16px;
   font-weight: 300;
-  padding-left: 5%;
+  border-bottom: 4px solid #99E2D0;
+  width: 40px;
+  margin-left: 14px;
 }
 
 .selection {
@@ -454,7 +462,6 @@ h4 {
   padding-left: 2px;
   margin-bottom: 15px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   background-color: #fff;
   border-radius: 14px;
@@ -464,16 +471,17 @@ h4 {
   cursor: pointer;
   width: 100%;
   display: flex;
+  justify-content: flex-start;
   flex-wrap: nowrap;
   flex-direction: row;
-  white-space: nowrap;
 }
 .selection__entries__container__card__group input[type=checkbox] {
   visibility: hidden;
   position: absolute;
 }
-input:checked ~ .selection__entries__container__card__group__check {
-  transform: scaleX(1);
+input:checked ~ .selection__entries__container__card__group__end {
+  transform: translateX(0px);
+  opacity: 1;
 }
 input:checked ~ .selection__entries__container__card__group__icone1 {
   -webkit-animation: translate-check 400ms;
@@ -490,22 +498,24 @@ input:checked ~ .selection__entries__container__card__group__icone3 {
           animation: translate-check 400ms;
   z-index: 0;
 }
-input:checked ~ .selection__entries__container__card__group__end {
-  transform: translate(0px);
+input:checked ~ .selection__entries__container__card__group__plat {
+  text-overflow: ellipsis;
 }
 .selection__entries__container__card__group__plat {
-  width: 64%;
+  width: 70%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding-left: 10px;
+  display: block;
+  padding-left: 5px 15px;
+  overflow: hidden;
+  text-overflow: inherit;
+  white-space: nowrap;
 }
 .selection__entries__container__card__group__plat__h3menu {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   padding: 0;
+  padding-bottom: 5px;
 }
 .selection__entries__container__card__group__plat__pmenu {
   margin: 0;
@@ -514,13 +524,15 @@ input:checked ~ .selection__entries__container__card__group__end {
   text-overflow: ellipsis;
 }
 .selection__entries__container__card__group__end {
-  width: 10%;
+  width: 41%;
   height: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
-  transform: translate(60px);
+  justify-content: flex-start;
+  transform-origin: 30% 50%;
+  transform: translateX(55px);
+  opacity: 0;
   transition: all 400ms;
 }
 .selection__entries__container__card__group__end__pricemenu {
@@ -529,25 +541,22 @@ input:checked ~ .selection__entries__container__card__group__end {
   display: flex;
   align-items: flex-end;
   padding-left: 2px;
-  width: 40px;
+  width: 100px;
 }
-.selection__entries__container__card__group__check {
-  width: 30%;
+.selection__entries__container__card__group__end__check {
+  width: 100%;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #99E2D0;
   border-radius: 0 14px 14px 0;
-  transform-origin: right 50%;
-  transform: scaleX(0);
-  transition: all 400ms;
 }
 .selection__entries__container__card__group__icone1 {
   position: absolute;
   z-index: -1;
-  right: 25px;
-  top: 80px;
+  right: 6%;
+  top: 14%;
   font-size: 27px;
   color: #99E2D0;
   background-color: #fff;

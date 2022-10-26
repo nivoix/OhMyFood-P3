@@ -70,6 +70,8 @@
 }
 .emptymenu {
     font-size: x-large;
+    opacity: 1;
+    transition: opacity 600ms cubic-bezier(0.5, 0.5, 0.5, 0.5) 0ms;
   }
 .fullmenu {
     position: absolute;
@@ -89,7 +91,9 @@
 .h2menu{
     font-size: 16px;
     font-weight: 300;
-    padding-left: 5%;
+    border-bottom: 4px solid $color-tertiary;
+    width: 40px;
+    margin-left: 14px;
 }
 
 .selection{
@@ -110,7 +114,6 @@
                 padding-left: 2px;
                 margin-bottom: 15px;
                 display: flex;
-                flex-direction: row;
                 justify-content: space-between;
                 background-color:#fff;
                 border-radius: 14px;
@@ -119,15 +122,18 @@
                     cursor: pointer;
                     width: 100%;
                     display: flex;
+                    justify-content: flex-start;
+                    
                     flex-wrap: nowrap;
                     flex-direction: row;
-                    white-space: nowrap;
+                    
                     input[type=checkbox] {
                         visibility: hidden;
                         position: absolute;
                     }
-                    input:checked ~ &__check {
-                        transform: scaleX(1);
+                    input:checked ~ &__end {
+                        transform: translateX(0px);
+                        opacity: 1;
                     }  
                     input:checked ~ &__icone1{
                         animation: translate-check 400ms;
@@ -141,21 +147,23 @@
                         animation: translate-check 400ms;
                         z-index: 0;                             
                     }
-                    input:checked ~ &__end{
-                        transform: translate(0px);
+                    input:checked ~ &__plat{
+                        text-overflow: ellipsis
                     }
                     &__plat{
-                        width: 64%;
+                        width: 70%;
                         height: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-evenly;
-                        padding-left: 10px;
+                        display: block;
+                        padding-left: 5px 15px;
+                        overflow: hidden;
+                        text-overflow: inherit;
+                        white-space: nowrap;
                         &__h3menu{
                             overflow: hidden;
                             text-overflow: ellipsis;
                             white-space: nowrap;
                             padding: 0;
+                            padding-bottom: 5px;
                         }
                         &__pmenu{
                             margin: 0;
@@ -165,13 +173,15 @@
                         }
                     }
                     &__end{
-                        width: 10%;
+                        width: 41%;
                         height: 100%;
                         display: flex;
                         flex-direction: row;
                         flex-wrap: nowrap;
-                        justify-content: center;
-                        transform: translate(60px);
+                        justify-content: flex-start;
+                        transform-origin: 30% 50%;
+                        transform: translateX(55px);
+                        opacity: 0;
                         transition: all 400ms;
                         &__pricemenu{
                             margin: 0;
@@ -179,26 +189,23 @@
                             display: flex;
                             align-items: flex-end;
                             padding-left: 2px;
-                            width: 40px;
+                            width: 100px;
                         }
-                    }
-                    &__check{
-                        width: 30%;
-                        height: 60px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        background-color: $color-tertiary;
-                        border-radius: 0 14px 14px 0;
-                        transform-origin: right 50%;
-                        transform: scaleX(0);
-                        transition: all 400ms; 
+                        &__check{
+                            width: 100%;
+                            height: 60px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: $color-tertiary;
+                            border-radius: 0 14px 14px 0; 
+                        }
                     }
                     &__icone1{
                         position: absolute;
                         z-index: -1;
-                        right: 25px;
-                        top: 80px;
+                        right: 6%;
+                        top: 14%;
                         font-size: 27px;
                         color: $color-tertiary;
                         background-color: #fff;
