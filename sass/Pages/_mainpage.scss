@@ -4,7 +4,7 @@
         align-items: center;
         justify-content: center;
         width: auto;
-        padding: 30px 0 8px 0;
+        padding: 30px 0px 8px 0;
         box-shadow: 5px 5px 10px #cccccc;
         margin-bottom: 5px;
         &__img{
@@ -16,10 +16,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: auto;
+        // width: auto;
         background-color: #EAEAEA;
-        padding: 10px 0 10px 0;
-        gap: 5%;
+        padding: 10px 1% 10px 14%;
+        gap: 10px;
         .ville{
             border: none;
             background-color: #EAEAEA;
@@ -34,6 +34,13 @@
         padding-bottom: 40px;
         text-align: center;
         padding-inline: 30px;
+        h1{
+            font-size: 22px;
+        }
+        p{
+            font-size: 13px;
+            padding-bottom: 20px;
+        }
     }
 }
 .rule{
@@ -43,6 +50,7 @@
     margin-bottom: 30px;
     &__list{
         width: 100%;
+        padding-inline: 20px;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -53,13 +61,13 @@
             justify-content: space-around;
         }
         &__bulle{
-            width: 80%;
+            width: 100%;
             max-width: 333px;
             height: 80px;
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
-            gap: 5%;
+            gap: 2%;
             align-items: center;
             border-radius: 20px;
             background-color: #F6F6F6;
@@ -68,6 +76,10 @@
             cursor: pointer;
             transition: transform 400ms;
                 &:hover{
+                    .fa-list, .fa-mobile-screen-button, .fa-store{
+                        color: $color-primary;
+                    }
+                    box-shadow: 6px 6px 10px #8c8c8c;
                     background-color: #e6e3e3;
                     transform:scale(1.1);
                 }
@@ -92,10 +104,7 @@ h2{
     margin-top: 30px;
     width: 100%;
 }
-.fa-store{
-    color: $color-primary;
-}
-.fa-list, .fa-mobile-screen-button{
+.fa-list, .fa-mobile-screen-button, .fa-store{
     color: grey;
 }
 .restaurant{
@@ -113,7 +122,7 @@ h2{
             flex-direction: row;
             flex-wrap: wrap;
             gap: 2%;
-    }
+        }
         &__restocard{
             width: 96%;
             border-radius: 20px;
@@ -149,60 +158,45 @@ h2{
                     height: 34px;
                     padding-top: 8px;
                     text-align: center;
-                    animation-duration: 0.70s;
-                    animation-name: clignoter;
-                    animation-iteration-count: infinite;
-                    transition: none;
-                        @keyframes clignoter {
-                            0%   { opacity:1; }
-                            50%   {opacity:0.65; }
-                            100% { opacity:1; }
-                        }
                 }
             }
             &__infocard{
                 display: flex;
-                flex-direction: row-reverse;
                 justify-content: space-between;
-                position: relative;
-                gap: 31%;
+                align-items: center;
                 width: 100%;
                 background-color: white;
                 border-radius: 0 0 20px 20px;
                 &__heart{
-                    input[type="checkbox"] {
-                        visibility: hidden;
-                    }
-                    input:checked ~ .empty{
+                    width: 32px;
+                    margin-right: 22px;
+                    cursor: pointer;
+                    &:hover .empty{
                         opacity: 0;
+                        // -webkit-text-fill-color: red;
                         }
-                    input:checked ~ .full{
+                    &:hover .full{
                         opacity: 1;
                     }
-                    width: 32px;
-                    position: relative;
-                    right: 30px;
-                    cursor: pointer;
                 }
                 &__nameandcity{
                     display: flex;
                     flex-direction: column;
+                    gap: 5px;
+                    padding: 12px 9px;
                 }
             }
         }
     }
 }
 .empty{
+    position: absolute;
     font-size: xx-large;
     opacity: 1;
     transition: opacity 600ms cubic-bezier(0.5, 0.5, 0.5, 0.5) 0ms;
+    
 }
 .full{
-    position: absolute;
-    right: 0px;
-    top: 18px;
-    left: 0px;
-    bottom: 0px;
     opacity: 0;
     background: linear-gradient(10deg, #ff79da 0%, #9356dc 100%);
     background-clip: text;
@@ -210,12 +204,6 @@ h2{
     font-size: xx-large;
     transition: opacity 600ms cubic-bezier(0.5, 0.5, 0.5, 0.5) 0ms;
 }
-h3, h4{
+h3, p{
     margin: 0;
-    padding-top: 5px;
-    padding-left: 15px;
-}
-h4{
-    font-weight: 400;
-    padding-bottom: 20px;
 }

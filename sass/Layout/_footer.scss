@@ -19,27 +19,22 @@ h5{
     padding-left: 20px;
     padding-top: 12px;
     padding-bottom: 20px;
+    @media screen and (min-width: 768px){
+        padding-left: 0;
+    }
     &__bloc{
         display: flex;
         flex-direction: column;
+        list-style-type: none;
         gap: 8%;
         height: 65%;
+        padding: 0;
         @media screen and (min-width: 768px){
             flex-direction: row;
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-around;
             gap: 2%;
-    }
-        &__propose, &__become{
-            display: flex;
-            flex-wrap: nowrap;
-            flex-direction: row;
-            align-items: center;
-            gap: 5%;
-            i{
-                width: 17px;
-            }
         }
         p{
             margin: 0;
@@ -49,6 +44,15 @@ h5{
             color: inherit;
             text-decoration: none;
             cursor: pointer;
+            color: #ffffff;
+            text-decoration: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 3%;
+            i{
+                width: 17px;
+            }
         }
     }
   }

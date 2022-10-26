@@ -25,32 +25,30 @@
         <h1>Réservez le menu qui vous convient</h1>
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
         <a href="#restaurant">
-          <div class="bouton">
             <button  type="button" class="button">Explorer nos restaurants</button>
-          </div>
-          </a>
+        </a>
       </div> 
     </header>
     <main class="rule">
       <!--3 etapes de fonctionnement-->
         <h2>Fonctionnement</h2>
-          <div class="rule__list">
-            <div class="rule__list__bulle">
+          <ol class="rule__list">
+            <li class="rule__list__bulle">
                 <div class="rule__list__bulle__number">1</div>
                 <i class="fa-solid fa-mobile-screen-button"></i>
                 <p>Choisissez un restaurant</p>
-            </div>
-            <div class="rule__list__bulle">
+            </li>
+            <li class="rule__list__bulle">
                 <div class="rule__list__bulle__number">2</div>
                 <i class="fa-solid fa-list"></i>
                 <p>Composez votre menu</p>
-            </div>
-            <div class="rule__list__bulle">
+            </li>
+            <li class="rule__list__bulle">
                 <div class="rule__list__bulle__number">3</div>
                 <i class="fa-solid fa-store"></i>
                 <p>Dégustez au restaurant</p>
-            </div>
-          </div>
+            </li>
+          </ol>
     </main>
     <section class="restaurant" id="restaurant">
       <h2>Restaurants</h2>
@@ -66,15 +64,14 @@
             </div>
           </a>
           <div class="restaurant__bloc__restocard__infocard"><!--carte renseignement-->
-            <label class="restaurant__bloc__restocard__infocard__heart">
-              <input type="checkbox" />
-              <i class="fa-regular fa-heart empty"></i>
-              <i class="fa-solid fa-heart full"></i>
-            </label>
               <div class="restaurant__bloc__restocard__infocard__nameandcity">
               <h3>La palette du goût</h3><!--nom-->
-              <h4>Ménilmontant</h4><!--prix--> 
-            </div>  
+              <p>Ménilmontant</p><!--prix--> 
+              </div>
+              <div class="restaurant__bloc__restocard__infocard__heart">
+                <i class="fa-regular fa-heart empty"></i>
+                <i class="fa-solid fa-heart full"></i>
+              </div>
           </div>
         </article>
         
@@ -89,16 +86,15 @@
             </div>
           </a>
           <div class="restaurant__bloc__restocard__infocard"><!--carte renseignement-->
-            <label class="restaurant__bloc__restocard__infocard__heart">
-              <input type="checkbox" />
+            <div class="restaurant__bloc__restocard__infocard__nameandcity">
+            <h3>La note enchantée</h3><!--nom-->
+            <p>Charonne</p><!--prix--> 
+            </div>
+            <div class="restaurant__bloc__restocard__infocard__heart">
               <i class="fa-regular fa-heart empty"></i>
               <i class="fa-solid fa-heart full"></i>
-            </label>
-            <div class="restaurant__bloc__restocard__infocard__nameandcity">
-              <h3>La note enchantée</h3><!--nom-->
-              <h4>Charonne</h4><!--prix--> 
-            </div>  
-          </div>
+            </div>
+        </div>
         </article>
         <!--fin d'une card-->
         <!--debut d'une card-->
@@ -110,16 +106,15 @@
             </div>
           </a>
           <div class="restaurant__bloc__restocard__infocard"><!--carte renseignement-->
-            <label class="restaurant__bloc__restocard__infocard__heart">
-              <input type="checkbox" />
+            <div class="restaurant__bloc__restocard__infocard__nameandcity">
+            <h3>À la française</h3><!--nom-->
+            <p>Cité Rouge</p><!--prix--> 
+            </div>
+            <div class="restaurant__bloc__restocard__infocard__heart">
               <i class="fa-regular fa-heart empty"></i>
               <i class="fa-solid fa-heart full"></i>
-            </label>
-            <div class="restaurant__bloc__restocard__infocard__nameandcity">
-              <h3>À la française</h3><!--nom-->
-              <h4>Cité Rouge</h4><!--prix--> 
-            </div>  
-          </div>
+            </div>
+        </div>
         </article>
         <!--fin d'une card-->
         <!--debut d'une card-->
@@ -131,34 +126,37 @@
             </div>
           </a>
           <div class="restaurant__bloc__restocard__infocard"><!--carte renseignement-->
-            <label class="restaurant__bloc__restocard__infocard__heart">
-              <input type="checkbox" />
+            <div class="restaurant__bloc__restocard__infocard__nameandcity">
+            <h3>Le délice des sens</h3><!--nom-->
+            <p>Folie-Méricourt</p><!--prix--> 
+            </div>
+            <div class="restaurant__bloc__restocard__infocard__heart">
               <i class="fa-regular fa-heart empty"></i>
               <i class="fa-solid fa-heart full"></i>
-            </label>
-            <div class="restaurant__bloc__restocard__infocard__nameandcity">
-              <h3>Le délice des sens</h3><!--nom-->
-              <h4>Folie-Méricourt</h4><!--prix--> 
-            </div>  
-          </div>
+            </div>
+        </div>
         </article>
         <!--fin d'une card-->
       </div>
     </section>
     <footer class="foot">
         <h5>ohmyfood</h5>
-        <div class="foot__bloc">
-          <div class="foot__bloc__propose">
+        <ol class="foot__bloc">
+          <li class="foot__bloc__propose">
+            <a href="#"class="foot__bloc__lien">
             <i class="fa-solid fa-utensils"></i>
             <p>Proposer un restaurant</p>
-          </div>
-          <div class="foot__bloc__become">
+            </a>
+          </li>
+          <li class="foot__bloc__become">
+            <a href="#" class="foot__bloc__lien">
             <i class="fa-solid fa-handshake-angle"></i>
             <p>Devenir partenaire</p>
-          </div>
-          <span>Mentions légales</span>
-          <span> <a href="mailto:contact@ohmyfood.com" class="foot__bloc__lien">Contact</a></span>
-        </div>
+            </a>
+          </li>
+          <li><a href="#" class="foot__bloc__lien">Mentions légales</a></li>
+          <li> <a href="mailto:contact@ohmyfood.com" class="foot__bloc__lien">Contact</a></li>
+        </ol>
         </footer>
     <script src="https://kit.fontawesome.com/6aa97794ec.js" crossorigin="anonymous"></script>   
   </body>

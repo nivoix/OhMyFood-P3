@@ -1,15 +1,14 @@
 .button{
     cursor: pointer;
-    padding: 20px 30px;
+    padding: 17px 29px;
     background: linear-gradient(175deg, #FF79DA, #9356DC);
     color: #FFFFFF;
     border-radius: 50px;
     border: transparent;
     box-shadow: 5px 5px 10px #cccccc;
-}
-.bouton{
     transition: transform 400ms;
     &:hover{
         transform:scale(1.15);
+        box-shadow: 6px 6px 10px #8c8c8c;
     }
 }
