@@ -372,6 +372,9 @@ h3, p {
 .menu__bloc__title__heartmenu:hover .full {
   opacity: 1;
 }
+.menu__order {
+  display: flex;
+}
 
 .empty {
   position: absolute;
@@ -445,6 +448,7 @@ h3, p {
   height: 60px;
   padding-top: 6px;
   flex: 1;
+  overflow: hidden;
   cursor: pointer;
 }
 .selection__entries__container__card__plat__h3menu {

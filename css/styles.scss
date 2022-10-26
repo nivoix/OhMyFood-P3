@@ -29,7 +29,6 @@
 }
 .menu{
     background-color: #F6F6F6;
-    
     &__img{
         width: 100%;
         max-height: 250px;
@@ -63,6 +62,10 @@
                 }
             }
         }
+    }
+    &__order{
+        display: flex;
+        
     }
 }
 .empty{
@@ -128,6 +131,7 @@
                         height: 60px;
                         padding-top: 6px;
                         flex: 1;
+                        overflow: hidden;
                         cursor: pointer;
                     &__h3menu{
                             overflow: hidden;
