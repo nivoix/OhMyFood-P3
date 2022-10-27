@@ -374,6 +374,8 @@ h3, p {
 }
 .menu__order {
   display: flex;
+  justify-content: center;
+  padding: 40px;
 }
 
 .empty {
@@ -421,6 +423,13 @@ h3, p {
   display: flex;
   flex-direction: column;
   margin-left: 3%;
+}
+@media screen and (min-width: 900px) {
+  .selection__entries__container {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 12px;
+  }
 }
 .selection__entries__container__card {
   cursor: pointer;
