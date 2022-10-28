@@ -124,6 +124,7 @@
                 background-color:#fff;
                 border-radius: 14px;
                 box-shadow: 5px 5px 10px #cccccc;
+                opacity: 0;
                 &:hover  &__check {
                         transform: translateX(0px);
                         margin-right: 0;
@@ -203,3 +204,46 @@
         }
     }
 }
+$anim-dur: 400ms;
+
+.one{
+    animation: sizearticles $anim-dur ease 0ms 1 normal forwards running;
+}
+.two{
+    animation: sizearticles $anim-dur ease 100ms 1 normal forwards running;
+}
+.three{
+    animation: sizearticles $anim-dur ease 200ms 1 normal forwards running;
+}
+.four{
+    animation: sizearticles $anim-dur ease 300ms 1 normal forwards running;
+}
+.five{
+    animation: sizearticles $anim-dur ease 400ms 1 normal forwards running;
+}
+.six{
+    animation: sizearticles $anim-dur ease 500ms 1 normal forwards running;
+}
+.seven{
+    animation: sizearticles $anim-dur ease 600ms 1 normal forwards running;
+}
+.eight{
+    animation: sizearticles $anim-dur ease 700ms 1 normal forwards running;
+}
+.nine{
+    animation: sizearticles $anim-dur ease 800ms 1 normal forwards running;
+}
+.ten{
+    animation: sizearticles $anim-dur ease 900ms 1 normal forwards running;
+}
+@keyframes sizearticles{
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+

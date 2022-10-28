@@ -21,6 +21,7 @@ body {
 .button:hover {
   transform: scale(1.15);
   box-shadow: 6px 6px 10px #8c8c8c;
+  filter: brightness(1.2);
 }
 
 h5 {
@@ -171,8 +172,8 @@ h5 {
 }
 .rule__list__bulle:hover {
   box-shadow: 6px 6px 10px #8c8c8c;
-  background-color: #e6e3e3;
-  transform: scale(1.1);
+  filter: brightness(1.02);
+  transform: scale(1.02);
 }
 .rule__list__bulle:hover .fa-list, .rule__list__bulle:hover .fa-mobile-screen-button, .rule__list__bulle:hover .fa-store {
   color: #9356DC;
@@ -442,6 +443,7 @@ h3, p {
   background-color: #fff;
   border-radius: 14px;
   box-shadow: 5px 5px 10px #cccccc;
+  opacity: 0;
 }
 .selection__entries__container__card:hover .selection__entries__container__card__check {
   transform: translateX(0px);
@@ -535,5 +537,77 @@ h3, p {
   }
   100% {
     transform: rotateZ(270deg);
+  }
+}
+
+.one {
+  -webkit-animation: sizearticles 400ms ease 0ms 1 normal forwards running;
+          animation: sizearticles 400ms ease 0ms 1 normal forwards running;
+}
+
+.two {
+  -webkit-animation: sizearticles 400ms ease 100ms 1 normal forwards running;
+          animation: sizearticles 400ms ease 100ms 1 normal forwards running;
+}
+
+.three {
+  -webkit-animation: sizearticles 400ms ease 200ms 1 normal forwards running;
+          animation: sizearticles 400ms ease 200ms 1 normal forwards running;
+}
+
+.four {
+  -webkit-animation: sizearticles 400ms ease 300ms 1 normal forwards running;
+          animation: sizearticles 400ms ease 300ms 1 normal forwards running;
+}
+
+.five {
+  -webkit-animation: sizearticles 400ms ease 400ms 1 normal forwards running;
+          animation: sizearticles 400ms ease 400ms 1 normal forwards running;
+}
+
+.six {
+  -webkit-animation: sizearticles 400ms ease 500ms 1 normal forwards running;
+          animation: sizearticles 400ms ease 500ms 1 normal forwards running;
+}
+
+.seven {
+  -webkit-animation: sizearticles 400ms ease 600ms 1 normal forwards running;
+          animation: sizearticles 400ms ease 600ms 1 normal forwards running;
+}
+
+.eight {
+  -webkit-animation: sizearticles 400ms ease 700ms 1 normal forwards running;
+          animation: sizearticles 400ms ease 700ms 1 normal forwards running;
+}
+
+.nine {
+  -webkit-animation: sizearticles 400ms ease 800ms 1 normal forwards running;
+          animation: sizearticles 400ms ease 800ms 1 normal forwards running;
+}
+
+.ten {
+  -webkit-animation: sizearticles 400ms ease 900ms 1 normal forwards running;
+          animation: sizearticles 400ms ease 900ms 1 normal forwards running;
+}
+
+@-webkit-keyframes sizearticles {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes sizearticles {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }/*# sourceMappingURL=styles.css.map */
