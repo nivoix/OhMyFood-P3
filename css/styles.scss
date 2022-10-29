@@ -4,6 +4,131 @@
 @import "../sass/Layout/footer";
 @import "../sass/Pages/mainpage";
 
+.spaceloader{
+    opacity: 1;
+    transform: scale(1);
+    animation: finish 3s ease-out forwards;
+    width: 100%;
+    inset: 0;
+    z-index: 20;
+    position: fixed;
+    height: auto;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background: linear-gradient(10deg, #ff79da 0%, #9356dc 100%);
+}
+@keyframes finish {
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: scale(3.5);
+    }
+}
+.loader1{
+    border: 10px solid transparent;
+    border-top: 10px solid #ff79da;
+    border-bottom: 10px solid #9356dc;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    animation: spin2 490ms linear infinite;
+}
+.loader2{
+    border: 10px solid transparent;
+    border-left: 10px solid #ff79da;
+    border-right: 10px solid #9356dc;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    animation: spin1 460ms linear infinite;
+}
+.loader3{
+    border: 10px solid transparent;
+    border-top: 10px solid #99E2D0;
+    border-bottom: 10px solid #99E2D0;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    animation: spin2 1178s linear infinite;
+}
+.loader4{
+    border: 10px solid transparent;
+    border-left: 10px solid #99E2D0;
+    border-right: 10px solid #99E2D0;
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    animation: spin1 1213ms linear infinite;
+}
+@keyframes spin1 {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+} 
+@keyframes spin2 {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+.fa-utensils{
+    color: #99E2D0;
+    width: 100px;
+    height: 100px;
+    font-size: xx-large;
+    position: relative;
+    padding-inline: 35px;
+    padding-top: 30px;
+    transform: scale(1);
+    animation: spin 61ms linear 2712.82ms infinite normal none running;
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
 .headermenu{
         display: flex;
         align-items: center;
