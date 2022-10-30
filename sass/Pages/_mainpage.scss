@@ -5,7 +5,7 @@
         justify-content: center;
         width: auto;
         padding: 30px 0px 8px 0;
-        box-shadow: $box-shadow;
+        @include box-shadow;
         margin-bottom: 5px;
         &__img{
             margin: auto;
@@ -72,14 +72,14 @@
             border-radius: 20px;
             background-color: $background-menu;
             margin-bottom: 20px;
-            box-shadow: $box-shadow;
+            @include box-shadow;
             cursor: pointer;
             transition: transform 400ms;
                 &:hover{
                     .fa-list, .fa-mobile-screen-button, .fa-store{
                         color: $color-primary;
                     }
-                    box-shadow: $box-shadow-hover;
+                    @include box-shadow-hover;
                     background-color: #fdfafa;
                     transform: scale(1.02);
                 }
@@ -126,7 +126,7 @@ h2{
         &__restocard{
             width: 96%;
             border-radius: 20px;
-            box-shadow: $box-shadow;
+            @include box-shadow;
             margin-bottom: 20px;
             @media screen and (min-width: 900px){
                 width: 48%;
@@ -165,7 +165,7 @@ h2{
                 justify-content: space-between;
                 align-items: center;
                 width: 100%;
-                background-color: white;
+                background-color: $background-color-card;
                 border-radius: 0 0 20px 20px;
                 &__heart{
                     width: 32px;

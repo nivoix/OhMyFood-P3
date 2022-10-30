@@ -9,7 +9,7 @@
     transition: transform 400ms;
     &:hover{
         transform:scale(1.15);
-        box-shadow: $box-shadow-hover;
+        @include box-shadow-hover;
         filter: brightness(1.2);
     }
 }

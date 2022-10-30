@@ -77,9 +77,9 @@
                 padding-left: 10px;
                 margin-bottom: 15px;
                 display: flex;
-                background-color:$bacground-color-card;
+                background-color:$background-color-card;
                 border-radius: 14px;
-                box-shadow: $box-shadow;
+                @include box-shadow;
                 opacity: 0;
                 &:hover  &__check {
                         transform: translateX(0px);
