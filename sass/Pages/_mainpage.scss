@@ -5,7 +5,7 @@
         justify-content: center;
         width: auto;
         padding: 30px 0px 8px 0;
-        box-shadow: 5px 5px 10px #cccccc;
+        box-shadow: $box-shadow;
         margin-bottom: 5px;
         &__img{
             margin: auto;
@@ -30,7 +30,7 @@
         display:flex ;
         align-items: center;
         flex-direction: column;
-        background-color: #F6F6F6;
+        background-color: $background-menu;
         padding-bottom: 40px;
         text-align: center;
         padding-inline: 30px;
@@ -70,17 +70,17 @@
             gap: 2%;
             align-items: center;
             border-radius: 20px;
-            background-color: #F6F6F6;
+            background-color: $background-menu;
             margin-bottom: 20px;
-            box-shadow: 5px 5px 10px #cccccc;
+            box-shadow: $box-shadow;
             cursor: pointer;
             transition: transform 400ms;
                 &:hover{
                     .fa-list, .fa-mobile-screen-button, .fa-store{
                         color: $color-primary;
                     }
-                    box-shadow: 6px 6px 10px #8c8c8c;
-                    filter: brightness(1.02);
+                    box-shadow: $box-shadow-hover;
+                    background-color: #fdfafa;
                     transform: scale(1.02);
                 }
             @media screen and (min-width: 900px) {
@@ -108,7 +108,7 @@ h2{
     color: grey;
 }
 .restaurant{
-    background-color: #F6F6F6;
+    background-color: $background-menu;
     display: flex;
     flex-direction: column;
     padding-left: 15px;
@@ -126,7 +126,7 @@ h2{
         &__restocard{
             width: 96%;
             border-radius: 20px;
-            box-shadow: 5px 5px 10px #cccccc;
+            box-shadow: $box-shadow;
             margin-bottom: 20px;
             @media screen and (min-width: 900px){
                 width: 48%;
@@ -197,7 +197,7 @@ h2{
 }
 .full{
     opacity: 0;
-    background: linear-gradient(10deg, #ff79da 0%, #9356dc 100%);
+    background: linear-gradient(10deg, $color-secondary 0%, $color-primary 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: xx-large;

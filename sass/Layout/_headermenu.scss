@@ -1,0 +1,23 @@
+.headermenu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding: 30px 0 8px 0;
+    gap: 30%;
+    margin-inline: 6%;
+    margin-bottom: 5px;
+    position: relative;
+    &__return{
+        position: absolute;
+        left: 2px;
+        top: 46%;
+        width: 20px;
+        height: 25px;
+        font-weight: 900;
+        &__arrow{
+            color: black;
+            font-size: x-large;
+    }
+}
+}
