@@ -167,8 +167,10 @@ body {
   padding-inline: 37px;
   padding-top: 38px;
   transform: scale(1);
-  -webkit-animation: spin 3s cubic-bezier(0.5, 0.5, 0.5, 0.5);
-          animation: spin 3s cubic-bezier(0.5, 0.5, 0.5, 0.5);
+  -webkit-animation: spin 2s cubic-bezier(0.5, 0.5, 0.5, 0.5);
+          animation: spin 2s cubic-bezier(0.5, 0.5, 0.5, 0.5);
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 @-webkit-keyframes spin {
@@ -319,6 +321,13 @@ body {
   border-radius: 14px;
   box-shadow: 5px 5px 10px #cccccc;
   opacity: 0;
+  -webkit-animation: sizearticles 400ms ease 1 normal forwards running;
+          animation: sizearticles 400ms ease 1 normal forwards running;
+}
+@media screen and (min-width: 900px) {
+  .selection__entries__container__card {
+    width: 33%;
+  }
 }
 .selection__entries__container__card:hover .selection__entries__container__card__check {
   transform: translateX(0px);
@@ -416,53 +425,53 @@ body {
 }
 
 .one {
-  -webkit-animation: sizearticles 400ms ease 0ms 1 normal forwards running;
-          animation: sizearticles 400ms ease 0ms 1 normal forwards running;
+  -webkit-animation-delay: 0ms;
+          animation-delay: 0ms;
 }
 
 .two {
-  -webkit-animation: sizearticles 400ms ease 100ms 1 normal forwards running;
-          animation: sizearticles 400ms ease 100ms 1 normal forwards running;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
 }
 
 .three {
-  -webkit-animation: sizearticles 400ms ease 200ms 1 normal forwards running;
-          animation: sizearticles 400ms ease 200ms 1 normal forwards running;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
 }
 
 .four {
-  -webkit-animation: sizearticles 400ms ease 300ms 1 normal forwards running;
-          animation: sizearticles 400ms ease 300ms 1 normal forwards running;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
 }
 
 .five {
-  -webkit-animation: sizearticles 400ms ease 400ms 1 normal forwards running;
-          animation: sizearticles 400ms ease 400ms 1 normal forwards running;
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
 }
 
 .six {
-  -webkit-animation: sizearticles 400ms ease 500ms 1 normal forwards running;
-          animation: sizearticles 400ms ease 500ms 1 normal forwards running;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
 }
 
 .seven {
-  -webkit-animation: sizearticles 400ms ease 600ms 1 normal forwards running;
-          animation: sizearticles 400ms ease 600ms 1 normal forwards running;
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
 }
 
 .eight {
-  -webkit-animation: sizearticles 400ms ease 700ms 1 normal forwards running;
-          animation: sizearticles 400ms ease 700ms 1 normal forwards running;
+  -webkit-animation-delay: 700ms;
+          animation-delay: 700ms;
 }
 
 .nine {
-  -webkit-animation: sizearticles 400ms ease 800ms 1 normal forwards running;
-          animation: sizearticles 400ms ease 800ms 1 normal forwards running;
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
 }
 
 .ten {
-  -webkit-animation: sizearticles 400ms ease 900ms 1 normal forwards running;
-          animation: sizearticles 400ms ease 900ms 1 normal forwards running;
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
 }
 
 @-webkit-keyframes sizearticles {
@@ -503,7 +512,7 @@ h5 {
 .foot {
   display: flex;
   flex-direction: column;
-  background-color: black;
+  background-color: #555555;
   color: white;
   width: 100%;
   height: 220px;
@@ -634,7 +643,7 @@ h5 {
 }
 .rule__list__bulle:hover {
   box-shadow: 6px 6px 10px #8c8c8c;
-  background-color: #fdfafa;
+  background-color: #faeefd;
   transform: scale(1.02);
 }
 .rule__list__bulle:hover .fa-list, .rule__list__bulle:hover .fa-mobile-screen-button, .rule__list__bulle:hover .fa-store {
@@ -732,7 +741,7 @@ h2 {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: white;
+  background-color: #fff;
   border-radius: 0 0 20px 20px;
 }
 .restaurant__bloc__restocard__infocard__heart {

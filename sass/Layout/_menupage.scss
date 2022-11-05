@@ -81,6 +81,10 @@
                 border-radius: 14px;
                 @include box-shadow;
                 opacity: 0;
+                animation: sizearticles $anim-dur ease 1 normal forwards running;
+                @media screen and (min-width: 900px){
+                    width: 33%;
+                }
                 &:hover  &__check {
                         transform: translateX(0px);
                         margin-right: 0;
@@ -160,37 +164,37 @@
         }
     }
 }
-$anim-dur: 400ms;
+
 
 .one{
-    animation: sizearticles $anim-dur ease 0ms 1 normal forwards running;
+    animation-delay: 0ms;
 }
 .two{
-    animation: sizearticles $anim-dur ease 100ms 1 normal forwards running;
+    animation-delay: 100ms;
 }
 .three{
-    animation: sizearticles $anim-dur ease 200ms 1 normal forwards running;
+    animation-delay: 200ms;
 }
 .four{
-    animation: sizearticles $anim-dur ease 300ms 1 normal forwards running;
+    animation-delay: 300ms;
 }
 .five{
-    animation: sizearticles $anim-dur ease 400ms 1 normal forwards running;
+    animation-delay: 400ms;
 }
 .six{
-    animation: sizearticles $anim-dur ease 500ms 1 normal forwards running;
+    animation-delay: 500ms;
 }
 .seven{
-    animation: sizearticles $anim-dur ease 600ms 1 normal forwards running;
+    animation-delay: 600ms;
 }
 .eight{
-    animation: sizearticles $anim-dur ease 700ms 1 normal forwards running;
+    animation-delay: 700ms;
 }
 .nine{
-    animation: sizearticles $anim-dur ease 800ms 1 normal forwards running;
+    animation-delay: 800ms;
 }
 .ten{
-    animation: sizearticles $anim-dur ease 900ms 1 normal forwards running;
+    animation-delay: 900ms;
 }
 @keyframes sizearticles{
     0% {
