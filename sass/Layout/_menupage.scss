@@ -86,11 +86,9 @@
                     width: 33%;
                 }
                 &:hover  &__check {
-                        transform: translateX(0px);
                         margin-right: 0;
                         &__icone1{
-                            animation: rotate-icone 300ms .2s;
-                            z-index: 0;                             
+                            animation: rotate-icone 300ms .2s;                             
                         }
                 }
                 &__plat{
@@ -132,10 +130,8 @@
                     justify-content: center;
                     background-color: $color-tertiary;
                     border-radius: 0 14px 14px 0;
-                    transform: translateX(0px);
                     transition: all cubic-bezier(0.4, 0, 1, 1) 500ms;
                     &__icone1{
-                        z-index: -1;
                         font-size: 27px;
                         color: $color-tertiary;
                         background-color: #fff;

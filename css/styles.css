@@ -330,13 +330,11 @@ body {
   }
 }
 .selection__entries__container__card:hover .selection__entries__container__card__check {
-  transform: translateX(0px);
   margin-right: 0;
 }
 .selection__entries__container__card:hover .selection__entries__container__card__check__icone1 {
   -webkit-animation: rotate-icone 300ms 0.2s;
           animation: rotate-icone 300ms 0.2s;
-  z-index: 0;
 }
 .selection__entries__container__card__plat {
   max-width: 100%;
@@ -377,11 +375,9 @@ body {
   justify-content: center;
   background-color: #99E2D0;
   border-radius: 0 14px 14px 0;
-  transform: translateX(0px);
   transition: all cubic-bezier(0.4, 0, 1, 1) 500ms;
 }
 .selection__entries__container__card__check__icone1 {
-  z-index: -1;
   font-size: 27px;
   color: #99E2D0;
   background-color: #fff;
